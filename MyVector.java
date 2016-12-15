@@ -1,3 +1,4 @@
+import java.util.Random;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
@@ -327,21 +328,6 @@ public class MyVector {
     public float dotProduct(MyVector myVector) {
         return dotProduct(myVector.x, myVector.y);
     }
-
-    /**
-     * Returns a random MyVector
-     * @param lowerBound the lowest x or y value that can be returned
-     * @param upperBound the highest x or y value that can be returned
-     * @return a random MyVector of Real numbers
-     * */
-    /*public static MyVector randomMyVector(int lowerBound, int upperBound) {
-        Random rand = new Random();
-        float x = rand.nextInt(upperBound - lowerBound);
-        x = x > 0 ? x + lowerBound : -x + lowerBound;
-        float y = rand.nextInt(upperBound - lowerBound);
-        y = y > 0 ? y + lowerBound : -y + lowerBound;
-        return new MyVector(x, y);
-    }*/
 
     /**
      * Computes cross product of the myVector represented by this instance
