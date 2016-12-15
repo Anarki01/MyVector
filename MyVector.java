@@ -161,6 +161,14 @@ public class MyVector {
     }
 
     /**
+     * Sets the components, x and y, of this <code>MyVector</code>
+     */
+    public void set(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    /**
      * Returns a copy of this <code>MyVector</code> as a <b>new</b> <code>MyVector</code>
      *
      * @return a copy of this <code>MyVector</code> as a <b>new</b> <code>MyVector</code>
