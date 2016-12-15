@@ -145,8 +145,11 @@ public class MyVector {
      * @return a rotated MyVector
      */
     public static MyVector rotate(MyVector myVector, float radAngle) {
-        return new MyVector(myVector.x * (float) cos(radAngle) - myVector.y * (float) sin(radAngle)
-                , myVector.x * (float) sin(radAngle) + myVector.y * (float) cos(radAngle));
+        double sine = sin(radAngle);
+        double cosine = cos(radAngle);
+
+        return new MyVector((float)(myVector.x * cosine - myVector.y * sine)
+                , (float)(myVector.x * sine + myVector.y * cosine));
     }
 
     /**
