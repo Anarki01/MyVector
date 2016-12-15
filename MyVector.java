@@ -354,6 +354,31 @@ public class MyVector {
     public final float cross(MyVector myVector) {
         return this.x * myVector.y - this.y * myVector.x;
     }
+    
+        /**
+     * Returns a random MyVector
+     * @return a random MyVector of with components ranging from 0 to 1
+     * */
+    public static MyVector randomMyVector() {
+        Random rand = new Random();
+
+        // Choose random floats between 0 and 1
+        return new MyVector(rand.nextFloat(), rand.nextFloat());
+    }
+    
+   /**
+    * Scales the MyVector represented by this instance
+    * Multiplies the x and y components of the MyVector represented by
+    * this instance by the specified x and y variables
+    * @param x the nuymber by which to multiply the x component of MyVector
+    *   represented by this instance
+    * @param y the nuymber by which to multiply the y component of MyVector
+    *   represented by this instance
+    */
+    public void scale(float x, float y) {
+        this.x *= x;
+        this.y *= y;
+    }
 
     /**
      * Computes the angle (in degrees) between this MyVector and
